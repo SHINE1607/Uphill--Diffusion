@@ -22,7 +22,7 @@ for i = 1:100
         arr_conc_old(i,j) = 0.5+0.01*sin(i*pi/10) + 0.01*cos(j*pi/10);
     end
 end
-surf(arr_conc_old)
+pcolor(arr_conc_old)
 zlim([-4 4])
         hold on
 %loop to find the mu 2d array
@@ -52,10 +52,19 @@ for m = 1:5
     str = sprintf('plot of uphill diffusion after time t =%d', m*dt); 
     title(str)
     zlabel('Concentration')
+    
+    surf(arr_conc)
     zlim([-4 4])
-    pcolor(arr_conc)
+    
+    
     
 end
+%From  G vs X plot we get the upper and lower bound of composition lies in between 15 and 85% 
+%By using max(arr_conc) and min(arr_conc) we get the maximum and minimum
+%value to be 3.3953 and  -2.5829 which is inside the range value obtained after 30 units of time
+%from G vs X plot
+
+(min(arr_conc))
 hold off;
         
         

@@ -26,6 +26,7 @@ for j =1:5
     xlabel('concentrtaion')
     ylabel('Gmix')
     
+    
     legend(['T=' num2str(T_arr(1))],['T=' num2str(T_arr(2))],['T=' num2str(T_arr(3))],['T=' num2str(T_arr(4))],['T=' num2str(T_arr(5))])
     hold on
 end
