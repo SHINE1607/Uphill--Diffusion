@@ -2,7 +2,7 @@ clear all
 clc
 
 
-
+%initializing the variables
 n = 100;
 R = 8.314;
 T = 500;
@@ -40,7 +40,7 @@ for m = 1 : 5
     arr_conc(i,1) = arr_conc(i,2);
     arr_conc(i,n) = arr_conc(i,n-1);
     hold on
-    
+    %plotting the surface 
     surf(1:100,1:100,arr_conc);
     title('plot of uphill diffusion')
     zlabel('Concentration')
